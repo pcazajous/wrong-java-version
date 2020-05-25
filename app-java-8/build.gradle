@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+java {
+    disableAutoTargetJvm()
+}
+
+dependencies {
+    // Works fine
+//    implementation project(':lib-java-14')
+
+    // Produces "class file has wrong version 58.0, should be 55.0"
+    implementation 'wrong.java.version:lib-java-14:1.0'
+}
+
+application {
+    mainClassName = 'app.App'
+}

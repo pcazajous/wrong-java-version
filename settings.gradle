@@ -1,0 +1,3 @@
+rootProject.name = 'wrong-java-version'
+
+include 'lib-java-14', 'app-java-8'
