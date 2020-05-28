@@ -1,7 +1,9 @@
 package lib;
 
+import java.net.http.HttpClient;
+
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
+    public HttpClient someLibraryMethod() {
+        return HttpClient.newBuilder().build();
     }
 }
